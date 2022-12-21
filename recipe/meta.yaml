@@ -1,63 +1,30 @@
 {% set name = "opentelemetry-instrumentation-requests" %}
-{% set version = "0.33b0" %}
-
+{% set version = "0.36b0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry-instrumentation-requests-{{ version }}.tar.gz
-  sha256: 6f428e4696779d4b4b6ade8b1f04d83ef3a619a3402093aa246336f6b2b01da0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_requests-{{ version }}.tar.gz
+  sha256: c40a075597325644e782e79e12065dfd8e363beac5259b89acda54c1d79a250c
 
 build:
-  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
+    - hatchling
   run:
-    - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.33b0
-    - opentelemetry-semantic-conventions ==0.33b0
-    - opentelemetry-util-http ==0.33b0
-    - python >=3.6
-    # - requests ~=2.0
-    # - opentelemetry-test ==0.24b0
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.26b1
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.27b0
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.28b0
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.28b1
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.29b0
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.30b0
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.30b1
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.31b0
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.32b0
-    # - httpretty ~=1.0
-    # - requests ~=2.0
-    # - opentelemetry-test-utils ==0.33b0
-    # - httpretty ~=1.0
+    - python >=3.7
+    - opentelemetry-api >=1.12,<2.dev0
+    - opentelemetry-instrumentation ==0.36b0
+    - opentelemetry-semantic-conventions ==0.36b0
+    - opentelemetry-util-http ==0.36b0
 
 test:
   imports:
