@@ -1,11 +1,11 @@
-About opentelemetry-instrumentation-requests
-============================================
+About opentelemetry-instrumentation-requests-feedstock
+======================================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/opentelemetry-instrumentation-requests-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/open-telemetry/opentelemetry-python-contrib/tree/main/instrumentation/opentelemetry-instrumentation-requests
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/opentelemetry-instrumentation-requests-feedstock/blob/main/LICENSE.txt)
 
 Summary: OpenTelemetry requests instrumentation
 
