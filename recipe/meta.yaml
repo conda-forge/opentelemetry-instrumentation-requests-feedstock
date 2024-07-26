@@ -1,5 +1,5 @@
 {% set name = "opentelemetry-instrumentation-requests" %}
-{% set version = "0.46b0" %}
+{% set version = "0.47b0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/opentelemetry_instrumentation_requests-{{ version }}.tar.gz
-  sha256: ef0ad63bfd0d52631daaf7d687e763dbd89b465f5cb052f12a4e67e5e3d181e4
+  sha256: f85ed52cbca21bff226e0e7f1888e5b9bc386657ecf4b0440f328e5b3aba8436
 
 build:
   noarch: python
@@ -22,9 +22,9 @@ requirements:
   run:
     - python >=3.7
     - opentelemetry-api ~=1.12
-    - opentelemetry-instrumentation ==0.46b0
-    - opentelemetry-semantic-conventions ==0.46b0
-    - opentelemetry-util-http ==0.46b0
+    - opentelemetry-instrumentation ==0.47b0
+    - opentelemetry-semantic-conventions ==0.47b0
+    - opentelemetry-util-http ==0.47b0
     # - requests ~=2.0
     # - opentelemetry-test-utils ==0.37b0
     # - opentelemetry-instrumentation-requests 
@@ -57,6 +57,7 @@ requirements:
     # - opentelemetry-test-utils ==0.44b0
     # - opentelemetry-instrumentation-requests 
     # - httpretty ~=1.0
+    # - requests ~=2.0
     # - requests ~=2.0
     # - requests ~=2.0
 
